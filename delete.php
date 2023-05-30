@@ -5,10 +5,9 @@ session_start();
     $query = "DELETE FROM animals WHERE animal_id=$delete_id;";
     if (mysqli_query($conn, $query)) {
         $_SESSION['message']="Record Deleted";
-        echo "<script>alert('Record deleted successfully');</script>";
         echo "<script>location.href='index.php';</script>";
       } else {
-        echo "<script>alert('Error deleting record');</script> ";
+        $_SESSION['message']="Error deleting record ! Try again";
       }
           
 ?>

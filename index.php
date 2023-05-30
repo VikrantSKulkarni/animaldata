@@ -47,7 +47,8 @@ include_once('includes/header.php'); ?>
                     <td><?php echo $row['animal_life']; ?></td>
                     <td><?php echo $row['animal_description']; ?></td>
                     <td>
-                        <a class="text-success" href="edit.php?edit_id=<?php echo $row['animal_id']?>"><i class="fa-solid fa-pencil"></i></a>
+                        <a class="text-success" href="submition.php?edit_id=<?php echo $row['animal_id']?>"><i class="fa-solid fa-pencil"></i></a>
+                        <!-- <a class="text-success" href="edit.php?edit_id=<?php echo $row['animal_id']?>"><i class="fa-solid fa-pencil"></i></a> -->
                         <a class="text-danger" onclick="return confirm('Are you sure you want to delete this item?');" href="delete.php?delete_id=<?php echo $row['animal_id']?>"><i class="fa-solid fa-trash"></i></a>
                     </td>
                 </tr>
