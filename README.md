@@ -1,2 +1,0 @@
-# animaldata
-CRUD Operation

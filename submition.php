@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
             unlink($target_file);
             $uploadOk = 1;
           }
-          if ($_FILES["animal_photo"]["size"] > 500000) {
+          if ($_FILES["animal_photo"]["size"] > 500000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
           }
@@ -97,12 +97,12 @@ if(isset($_POST['submit'])){
         <form action="<?php if(isset($_GET['edit_id'])){ echo "update.php";}?>" method="post" class="form-group" enctype="multipart/form-data">
             <label for="name"> Name *</label>
             <input type="text" name="animal_name" id="" class="form-control" value="<?php if(isset($_GET['edit_id'])){echo $animal_name;} ?>" required>
-            <input type="text" name="edit_id" value="<?php if(isset($_GET['edit_id'])){echo $edit_id;} ?>">
+            <input type="hidden" name="edit_id" value="<?php if(isset($_GET['edit_id'])){echo $edit_id;} ?>">
             <?php if(isset($_GET['edit_id'])){?>
               <img src="<?php echo $animal_photo;?>" style="height: 100px;width:100px;" alt="image">
             <?php }?>  
             <label for="name">Upload Photo *</label>
-            <input type="text" name="old_pic" value="<?php  if(isset($_GET['edit_id'])){echo $animal_photo;}  ?>" id="">
+            <input type="hidden" name="old_pic" value="<?php  if(isset($_GET['edit_id'])){echo $animal_photo;}  ?>" id="">
             <input type="file" name="animal_photo" id="" class="form-control">
            
             <label for="Category">Category *</label>

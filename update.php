@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
             unlink($target_file);
             $uploadOk = 1;
           }
-          if ($_FILES["animal_photo"]["size"] > 500000) {
+          if ($_FILES["animal_photo"]["size"] > 500000000) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
           }
